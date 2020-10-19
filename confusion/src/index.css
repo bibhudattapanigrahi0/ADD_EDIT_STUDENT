@@ -1,0 +1,18 @@
+.NavItem{
+  background-position: red;
+  color:red
+}
+.spacer{
+  height:100px;
+
+  clear:both;
+border:none;
+width:100%;
+}
+.spacer{
+  height:70px;
+
+  clear:both;
+border:none;
+width:100%;
+}
