@@ -8,7 +8,6 @@ import { Control, Form, actions } from 'react-redux-form';
 import axios from 'axios';
 
 
-
 class Studentfee extends Component{
   constructor(props){
     super(props);
@@ -31,52 +30,46 @@ return(
 
   }}>
   <Row className="form-group">
+  <Label htmlFor=".fee.fee1" md={2}>fee1</Label>
+  <Col md={10}>
+      <Control.text model=".fee.fee1" id="fee1" name="fee1"
 
-                                
+          className="form-control"
+            />
+  </Col>
+  </Row>
+  <Row className="form-group">
+  <Label htmlFor=".fee.fee2" md={2}>fee2</Label>
+  <Col md={10}>
+  <Control.text model= ".fee.fee2" id="fee2" name="fee2"
 
-                                                              <Label htmlFor=".fee.fee1" md={2}>fee1</Label>
-                                                              <Col md={10}>
-                                                                  <Control.text model=".fee.fee1" id="fee1" name="fee1"
+  className="form-control"
+  />
+  </Col>
+  </Row>
+  <Row className="form-group">
+  <Label htmlFor=".fee.fee3" md={2}>fee3</Label>
+  <Col md={10}>
+  <Control.text model=".fee.fee3" id="fee3" name="fee3"
 
-                                                                      className="form-control"
-                                                                       />
-                                                              </Col>
-                                                          </Row>
-                              <Row className="form-group">
-                                  <Label htmlFor=".fee.fee2" md={2}>fee2</Label>
-                                  <Col md={10}>
-                                      <Control.text model= ".fee.fee2" id="fee2" name="fee2"
+  className="form-control"
+  />
+  </Col>
+  </Row>
 
-                                          className="form-control"
-                                           />
-                                  </Col>
-                              </Row>
-                              <Row className="form-group">
-                                  <Label htmlFor=".fee.fee3" md={2}>fee3</Label>
-                                  <Col md={10}>
-                                      <Control.text model=".fee.fee3" id="fee3" name="fee3"
+  <Row className="form-group">
+  <Col md={{size:3, offset: 2}}>
+  <Button type="submit" color="primary" md={4}>
+  submit
+  </Button>
+  </Col>
+  <Col md={{size:3, offset: 0}}>
+  <Control.reset model=".fee"  md={4}>
+  Clear Values
+  </Control.reset>
 
-                                          className="form-control"
-                                           />
-                                  </Col>
-                              </Row>
-
-                              <Row className="form-group">
-                                 <Col md={{size:3, offset: 2}}>
-                                     <Button type="submit" color="primary" md={4}>
-                                     submit
-                                     </Button>
-                                     </Col>
-                                <Col md={{size:3, offset: 0}}>
-                                     <Control.reset model=".fee"  md={4}>
-                                   Clear Values
-                                 </Control.reset>
-
-                                 </Col>
-
-
-
-                             </Row>
+  </Col>
+  </Row>
 
   </Form>
 );
