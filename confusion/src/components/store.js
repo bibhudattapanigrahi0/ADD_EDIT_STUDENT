@@ -77,10 +77,68 @@ reg_regular_form:{
   late_receipt_path:"",
   late_receipt_date:"",
   late_transaction_id:""
+},
+stu_academic:{
+  admn_no:"",
+  auth_id:"",
+  enroll_year:"",
+  adm_based_on:"",
+  iit_jee_rank:"",
+  iit_jee_cat_rank:"",
+  cat_score:"",
+  gate_score:"",
+  course_id:"",
+  branch_id:"",
+  semester:"",
+  other_rank:"",
+  grading_type:""
+},
+stu_adm_fee:{
+  admn_no:"",
+  fee_mode:"",
+  fee_amount:"",
+  fee_in_favour:"",
+  payment_made_on:"",
+  transaction_id:""
+},
+stu_enroll_passout:{
+  admn_no:"",
+  enroll_year:"",
+  passout_year:""
+},
+stu_info:{
+  admn_no:"",
+  admn_date:"",
+  enrollment_no:"",
+  stu_type:"",
+  identification_mark:"",
+  parent_mob_no:"",
+  parent_email:"",
+  parent_landline_no:"",
+  alt_mob_no:"",
+  alt_email:"",
+  migration_cert:"",
+  name_in_hindi:"",
+  blood_group:""
+},
+stu_other_info:{
+  admn_no:"",
+  fathers_occupation:"",
+  mothers_occupation:"",
+  fathers_annual_income:"",
+  mothers_annual_income:"",
+  guardian_name:"",
+  guardian_relation:"",
+  bank_name:"",
+  account_no:"",
+  aadhaar_card_no:"",
+  extra_curr_act:"",
+  other_relevent_info:""
+},
+stu_prep_data:{
+  admn_no:"",
+  session_year:""
 }
-
-
-
 
 }
 
