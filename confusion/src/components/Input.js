@@ -1,16 +1,15 @@
 import React,{Component} from 'react';
-import { Navbar,NavItem, NavbarBrand } from 'reactstrap';
 
 import {Data} from './Data'
 import { connect } from 'react-redux';
-import { Control, Form, actions } from 'react-redux-form';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import { withRouter } from "react-router";
 
-
 import Studentform from './forms/Student';
 import Studentfee from './forms/Fee';
+
+import UserDetails from './forms/UserDetails';
 import Fb_student_feedback from './forms/fb_student_feedback';
 import Hs_assigned_student_room from './forms/hs_assigned_student_room'
 import Hs_student_allotment_list from './forms/hs_student_allotment_list'
@@ -33,42 +32,29 @@ class Input extends Component{
  switch(val){
    this.setState({current:val});
  }
-
-
-
-render(){
-
-  return(
-    <div class="container">
-
-
-
-  <div class="content container"   >
-       <Switch>
-
-             <Route exact path='/Studentform' component={()=> <Studentform  />} />
-             <Route exact path='/Studentfee' component={() => <Studentfee />} />
-             <Route exact path='/Fb_student_feedback' component={() => <Fb_student_feedback />} />
-             <Route exact path='/hs_assigned_student_room' component={() => <Hs_assigned_student_room />} />
-             <Route exact path='/hs_student_allotment_list' component={() => <Hs_student_allotment_list />} />
-             <Route exact path='/reg_regular_form' component={() => <Reg_regular_form />} />
-             <Route exact path='/stu_academic' component={() => <Studentacad />} />
-             <Route exact path='/stu_adm_fee' component={() => <StudentAdmFee />} />
-             <Route exact path='/stu_info' component={() => <StudentInfo />} />
-             <Route exact path='/stu_enroll_passout' component={() => <StudentEnrollPassout />} />
-             <Route exact path='/stu_other_info' component={() => <StuOtherInfo />} />
-             <Route exact path='/stu_prep_data' component={() => <StuPrepData />} />
-             <Redirect to="/Studentform" />
-         </Switch>
-</div>
-    </div>
-  );
-
+  render(){
+    return(
+      <div class="container">
+        <div class="content container"   >
+         <Switch>
+               <Route exact path='/Studentform' component={()=> <Studentform  />} />
+               <Route exact path='/Studentfee' component={() => <Studentfee />} />
+               <Route exact path='/Fb_student_feedback' component={() => <Fb_student_feedback />} />
+               <Route exact path='/hs_assigned_student_room' component={() => <Hs_assigned_student_room />} />
+               <Route exact path='/hs_student_allotment_list' component={() => <Hs_student_allotment_list />} />
+               <Route exact path='/reg_regular_form' component={() => <Reg_regular_form />} />
+               <Route exact path='/stu_academic' component={() => <Studentacad />} />
+               <Route exact path='/stu_adm_fee' component={() => <StudentAdmFee />} />
+               <Route exact path='/stu_info' component={() => <StudentInfo />} />
+               <Route exact path='/stu_enroll_passout' component={() => <StudentEnrollPassout />} />
+               <Route exact path='/stu_other_info' component={() => <StuOtherInfo />} />
+               <Route exact path='/stu_prep_data' component={() => <StuPrepData />} />
+               <Route exact path='/user_details' component={()=> <UserDetails/>}/>
+               <Redirect to="/Studentform" />
+          </Switch>
+        </div>
+      </div>
+    );
+  }
 }
-
-}
-
-
-
-
 export default withRouter(connect(null)(Input));
