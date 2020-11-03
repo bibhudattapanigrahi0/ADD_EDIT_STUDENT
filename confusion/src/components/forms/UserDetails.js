@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Col, CustomInput,FormGroup, Input,Label,Button, Container} from 'reactstrap'
+import {Col,FormGroup,Label,Button, Container} from 'reactstrap'
 import axios from 'axios';
 import {connect} from 'react-redux';
 import {Control ,Form ,actions} from 'react-redux-form';
@@ -30,13 +30,13 @@ class UserDetails extends React.Component{
             <Form autoComplete="off" noValidate 
                 model="global_form"
                 onSubmit={(global_form)=>{
-                    axios.post('http://localhost:8000',global_form.user_details)
+                    axios.post(`http://localhost:8000`,global_form.user_details)
                     .then(res=>{
                         console.log(res);
                         console.log(res.data);
                     });
                     console.log(global_form.user_details);
-                    this.props.dispatch(actions.reset("global_form.user_details"))
+                    this.props.dispatch(actions.reset("global_form.user_details"));
                 }}
             >
                 <FormGroup row>
@@ -314,12 +314,25 @@ class UserDetails extends React.Component{
                         </FormGroup>
                     </Col>
                 </FormGroup>
-                <FormGroup>
-                    <Control.select model=".user_details.dept_id" className="form-control" id="dept_id" name="dept_id">
-                        <option value="">Department</option>
-                        {this.state.departments.map((value)=>{return <option>{value}</option>})}
-                    </Control.select>
+                <FormGroup row>
+                    <Col sm={6}>
+                        <FormGroup row>
+                            <Control.select model=".user_details.dept_id" className="form-control" id="dept_id" name="dept_id">
+                                <option value="">Department</option>
+                                {this.state.departments.map((value)=>{return <option>{value}</option>})}
+                            </Control.select>
+                        </FormGroup>
+                    </Col>
+                    <Col sm={6}>
+                        <FormGroup row>
+                            <Label for="photopath" md={3}>Profile Pic</Label>
+                            <Col>
+                                <Control.file model=".user_details.photopath" className="form-control" id="photopath" name="photopath"/>
+                            </Col>
+                        </FormGroup>
+                    </Col>
                 </FormGroup>
+               
                 <FormGroup>
                     <Col sm={{ offset: 5, size:5 }}>
                         <Button type="submit" color="primary">

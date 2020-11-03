@@ -1,9 +1,7 @@
 import React,{Component} from 'react';
-import { Navbar,NavItem, NavbarBrand } from 'reactstrap';
 
 import {Data} from './Data'
 import { connect } from 'react-redux';
-import { Control, Form, actions } from 'react-redux-form';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import { withRouter } from "react-router";

@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware ,combineReducers} from 'redux';
+import { createStore} from 'redux';
 import { combineForms } from 'react-redux-form';
 
 let initialstate_test={
@@ -53,6 +53,7 @@ user_details:{
   state:"",
   city:"",
   pincode:"",
+  photopath:"",
 }
 
 }
