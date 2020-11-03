@@ -40,29 +40,10 @@ render(){
 
   return(
     <div class="container">
-    <div class="row">
-    <nav class="navbar navbar-dark navbar-expand-sm bg-primary fixed-top" >
-        <div class="container">
 
-                <ul class="navbar-nav mr-auto">
 
-                <li class="nav-item" ><NavLink className="nav-link"  to='/Studentform'>student_detail</NavLink></li>
-                <li class="nav-item" ><NavLink className="nav-link"  to='/Studentfee'>fee_detail</NavLink></li>
-                <li class="nav-item" ><NavLink className="nav-link"  to='/Fb_student_feedback'>student_feedback</NavLink></li>
-                <li class="nav-item" ><NavLink className="nav-link"  to='/hs_assigned_student_room'>hs_assigned_student_room</NavLink></li>
-                <li class="nav-item" ><NavLink className="nav-link"  to='/hs_student_allotment_list'>hs_student_allotment_list</NavLink></li>
-                <li class="nav-item" ><NavLink className="nav-link"  to='/reg_regular_form'>regular_form</NavLink></li>
-                <li class="nav-item" ><NavLink className="nav-link"  to='/stu_academic'>stu_academic</NavLink></li>
-                <li class="nav-item" ><NavLink className="nav-link"  to='/stu_adm_fee'>stu_adm_fee</NavLink></li>
-                <li class="nav-item" ><NavLink className="nav-link"  to='/stu_info'>stu_info</NavLink></li>
-                <li class="nav-item" ><NavLink className="nav-link"  to='/stu_enroll_passout'>stu_enroll_passout</NavLink></li>
-                <li class="nav-item" ><NavLink className="nav-link"  to='/stu_other_info'>stu_other_info</NavLink></li>
-                <li class="nav-item" ><NavLink className="nav-link"  to='/stu_prep_data'>stu_prep_data</NavLink></li>
-                </ul>
-        </div>
-    </nav>
-    </div>
-    <div class="spacer"></div>
+
+  <div class="content container"   >
        <Switch>
 
              <Route exact path='/Studentform' component={()=> <Studentform  />} />
@@ -79,7 +60,7 @@ render(){
              <Route exact path='/stu_prep_data' component={() => <StuPrepData />} />
              <Redirect to="/Studentform" />
          </Switch>
-
+</div>
     </div>
   );
 
