@@ -34,32 +34,12 @@ function App() {
               </li>
               <li class="nav-item">
                 <NavLink className="nav-link" to="/stu_academic">
-                  stu_academic
+                  Student Details
                 </NavLink>
               </li>
               <li class="nav-item">
                 <NavLink className="nav-link" to="/stu_adm_fee">
-                  stu_adm_fee
-                </NavLink>
-              </li>
-              <li class="nav-item">
-                <NavLink className="nav-link" to="/stu_info">
-                  stu_info
-                </NavLink>
-              </li>
-              <li class="nav-item">
-                <NavLink className="nav-link" to="/stu_enroll_passout">
-                  stu_enroll_passout
-                </NavLink>
-              </li>
-              <li class="nav-item">
-                <NavLink className="nav-link" to="/stu_other_info">
-                  stu_other_info
-                </NavLink>
-              </li>
-              <li class="nav-item">
-                <NavLink className="nav-link" to="/stu_prep_data">
-                  stu_prep_data
+                  Admission fee
                 </NavLink>
               </li>
               <li class="nav-item">
