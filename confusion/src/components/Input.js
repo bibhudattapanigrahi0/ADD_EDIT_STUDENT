@@ -14,10 +14,6 @@ import HsStudentAllotmentList from "./forms/hs_student_allotment_list";
 import RegRegularForm from "./forms/reg_regular_form";
 import Studentacad from "./forms/stu_academic";
 import StudentAdmFee from "./forms/stu_adm_fee";
-import StudentInfo from "./forms/stu_info";
-import StudentEnrollPassout from "./forms/stu_enroll_passout";
-import StuOtherInfo from "./forms/stu_other_info";
-import StuPrepData from "./forms/stu_prep_data";
 
 class Input extends Component {
   constructor(props) {
@@ -71,22 +67,6 @@ class Input extends Component {
               path="/stu_adm_fee"
               component={() => <StudentAdmFee />}
             />
-            <Route exact path="/stu_info" component={() => <StudentInfo />} />
-            <Route
-              exact
-              path="/stu_enroll_passout"
-              component={() => <StudentEnrollPassout />}
-            />
-            <Route
-              exact
-              path="/stu_other_info"
-              component={() => <StuOtherInfo />}
-            />
-            <Route
-              exact
-              path="/stu_prep_data"
-              component={() => <StuPrepData />}
-            />
             <Route
               exact
               path="/user_details"
@@ -100,3 +80,4 @@ class Input extends Component {
   }
 }
 export default withRouter(connect(null)(Input));
+
