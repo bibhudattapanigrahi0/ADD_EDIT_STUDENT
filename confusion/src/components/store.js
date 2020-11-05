@@ -117,22 +117,6 @@ let global_state = {
     semester: "",
     other_rank: "",
     grading_type: "",
-  },
-  stu_adm_fee: {
-    admn_no: "",
-    fee_mode: "",
-    fee_amount: "",
-    fee_in_favour: "",
-    payment_made_on: "",
-    transaction_id: "",
-  },
-  stu_enroll_passout: {
-    admn_no: "",
-    enroll_year: "",
-    passout_year: "",
-  },
-  stu_info: {
-    admn_no: "",
     admn_date: "",
     enrollment_no: "",
     stu_type: "",
@@ -145,9 +129,7 @@ let global_state = {
     migration_cert: "",
     name_in_hindi: "",
     blood_group: "",
-  },
-  stu_other_info: {
-    admn_no: "",
+    passout_year: "",
     fathers_occupation: "",
     mothers_occupation: "",
     fathers_annual_income: "",
@@ -160,10 +142,14 @@ let global_state = {
     extra_curr_act: "",
     other_relevent_info: "",
   },
-  stu_prep_data: {
+  stu_adm_fee: {
     admn_no: "",
-    session_year: "",
-  },
+    fee_mode: "",
+    fee_amount: "",
+    fee_in_favour: "",
+    payment_made_on: "",
+    transaction_id: "",
+  }
 };
 
 const store = createStore(
