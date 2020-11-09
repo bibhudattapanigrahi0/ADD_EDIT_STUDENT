@@ -164,6 +164,12 @@ let global_state = {
     admn_no: "",
     session_year: "",
   },
+  test: {
+    first_name: "",
+    fee: "",
+    current_semester: "",
+    nick_name: "",
+  },
 };
 
 const store = createStore(
